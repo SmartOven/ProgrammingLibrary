@@ -1,4 +1,0 @@
-Beginner skills - https://github.com/jorgegonzalez/beginner-projects
-All on C - https://github.com/kozross/awesome-c
-           (data bases, AI and more)
-All about all - https://github.com/MaximAbramchuck/awesome-interview-questions#docker
