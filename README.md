@@ -23,7 +23,7 @@
     * *React Native* - [an article](https://blog.hasura.io/tutorial-fullstack-react-native-with-graphql-and-authentication-18183d13373a/)
     * *Node.js* - [an article](https://hackernoon.com/full-stack-web-application-using-react-node-js-express-and-webpack-97dbd5b9d708)
 12. Virtual machine - [GitHub](https://github.com/skx/simple.vm)
-13. Server administrating and WEB:
+13. Writing and administrating server + WEB:
     * *Vue.js* - [an article](https://matthiashager.com/complete-vuejs-application-tutorial)
     * *Node.js* + *MongoDB* - [an article](https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb)
     * *HTTP* Server on *Java* - [an article](https://javarevisited.blogspot.com/2015/06/how-to-create-http-server-in-java-serversocket-example.html)
