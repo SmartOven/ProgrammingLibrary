@@ -1,0 +1,4 @@
+SQL + Python + Flask = https://www.twilio.com/blog/2015/03/choose-your-own-adventures-presentations-wizard-mode-part-1-of-3.html
+RerhinkDB + Pythin = https://realpython.com/rethink-flask-a-simple-todo-list-powered-by-flask-and-rethinkdb/
+MongoDB + Node.js = https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
+Analyze Big Data on Python - https://www.freecodecamp.org/news/using-data-science-to-understand-what-makes-wine-taste-good-669b496c67ee/

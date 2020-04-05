@@ -1,0 +1,3 @@
+Python - https://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/
+React Native      - https://blog.hasura.io/tutorial-fullstack-react-native-with-graphql-and-authentication-18183d13373a/
+    (and Node.js) - https://hackernoon.com/full-stack-web-application-using-react-node-js-express-and-webpack-97dbd5b9d708

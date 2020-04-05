@@ -1,0 +1,4 @@
+Python - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+Python (check scanner) - https://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/
+C++ and Python (object detection) - https://www.learnopencv.com/deep-learning-based-object-detection-and-instance-segmentation-using-mask-r-cnn-in-opencv-python-c/
+Python (text detection) - https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
