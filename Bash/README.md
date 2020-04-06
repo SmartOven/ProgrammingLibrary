@@ -19,4 +19,11 @@
   + `-le` is `<=` (less-equal)
   + `-lt` is `<` (strictly less)
   + `-ne` is `!=` (not equal)
-* Kek
+* Сравнение строк:
+  + `s1 = s2` -> `if (s1 == s2) return true;`
+  + `s1 != s2` -> `if (s1 != s2) return true;`
+  + `s1 < s2` -> `if (s1 < s2) return true;`
+  + `s1 > s2` -> `if (s1 > s2) return true;`
+  + `s1 < s2` -> `if (s1 < s2) return true;`
+  + `-n s1` -> `if (s1.length() > 0) return true;`
+  + `-z s1` -> `if (s1.length() == 0) return true;`
