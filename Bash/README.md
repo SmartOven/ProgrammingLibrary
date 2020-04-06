@@ -8,9 +8,15 @@
 * Извлечение информации из вывода команд: `<name>=$(<command>)` (example: `iam=$(whoami)`)
 * Мат. операции: `<name>=$((a+b))` (example: `sum=$((2+4*6))`)
 * Конструкция if-then-elif-else-fi (if/then/elif/else/fi - все пишется на новой строке):  
-  + `if <expression> then <solution> fi`  
+  + `if [<expression>] then <solution> fi`  
   (example: `if grep $user /etc/passwd then echo "The user $user Exists" fi`)
-  + `if <expression> then <solution> else <another solution> fi`  
-  (example: `if grep $user /etc/passwd then echo "The user $user Exists" fi`)
-  + `if <expression> then <solution> elif <another expression> then <another solution> fi`  
-  (example: `if grep $user /etc/passwd then echo "$user Exists" elif ls /home then echo "doesn’t exist but there is a dirunder /home" fi`)
+  + `if [<expression>] then <solution> else <another solution> fi`
+  + `if [<expression>] then <solution> elif [<another expression>] then <another solution> fi`
+* Сравнение чисел:  
+  + `-eq` is `==` (equal)
+  + `-ge` is `>=` (greater-equal)
+  + `-gt` is `>` (strictly greater)
+  + `-le` is `<=` (less-equal)
+  + `-lt` is `<` (strictly less)
+  + `-ne` is `!=` (not equal)
+* Kek
