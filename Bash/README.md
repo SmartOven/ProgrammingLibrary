@@ -5,4 +5,4 @@
 * Переменные среды: $<name> (example: `$HOME`)
 * Управляющий символ: `\` (example: `\$`, `\\`)
 * Создание переменных: `<name>=<value>` (example: `name=Yarik`, `age=18`, `echo "$name is $age years old"`)
-* Извлечение информации из вывода команд: `<name>=\`<command>\``
+* Извлечение информации из вывода команд: `<name>=$(<command>)`
