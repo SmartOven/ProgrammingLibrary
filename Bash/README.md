@@ -28,10 +28,11 @@
   + `-lt` is `<` (strictly less)
   + `-ne` is `!=` (not equal)
 * Сравнение строк:
+  + Если сравнивается переменная, объявленная статичной строкой, ее надо дополнительно заключать в двойные кавычки  
+  (example: `s1 = $USER s2 = "SmartOven" if [$s1 \< "$s2"]) then echo "OK" fi`)
   + `s1 = s2` -> `if (s1 == s2) return true;`
   + `s1 != s2` -> `if (s1 != s2) return true;`
-  + `s1 < s2` -> `if (s1 < s2) return true;`
-  + `s1 > s2` -> `if (s1 > s2) return true;`
-  + `s1 < s2` -> `if (s1 < s2) return true;`
+  + `s1 \< s2` -> `if (s1 < s2) return true;`
+  + `s1 \> s2` -> `if (s1 > s2) return true;`
   + `-n s1` -> `if (s1.length() > 0) return true;`
   + `-z s1` -> `if (s1.length() == 0) return true;`
