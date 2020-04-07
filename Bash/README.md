@@ -49,8 +49,12 @@
   + Старше ли <file1>, чем <file2>: `<file1> -ot <file2>`
   + Существует ли файл, и является ли его владельцем текущий пользователь: `-O <file>`
   + Сществует ли файл, и соответствует ли его идентификатор группы идентификатору группы текущего пользователя: `-G <file>`
+* Separator (разделитель): изначально `bash` считает сепараторами пробел, табуляцию и перенос строки, но список сепараторов можно изменить, изменив переменную IFS: `IFS=$'\n'` или `IFS=:`
+* Цикл while:
+  + Простой цикл bash: `while [<expression>] do <another expression> done`  
+  (example: `var1=5 while [ $var1 -gt 0 ] do echo $var1 var1=$[ $var1 - 1 ] done`)
 * Цикл for:
-  + `for <var> in <list> do <list of commands> done`  
+  + Простой цикл bash: `for <var> in <list> do <list of commands> done`  
   (simple example: `for var in first second third fourth fifth do echo The $var item done`)  
   (real example: `file="myfile" for var in $(cat $file) do echo " $var" done`)
-* Separator (разделитель): изначально `bash` считает сепараторами пробел, табуляцию и перенос строки, но список сепараторов можно изменить 
+  + С-подобный цикл: `for (( a = 1; a < 10; a++ ))`
