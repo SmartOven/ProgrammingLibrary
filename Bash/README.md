@@ -1,4 +1,4 @@
-# Manual по Bash-скриптам (краткий спикок возможностей, писал для себя самого)
+# Manual по Bash-скриптам (краткий список возможностей, писал для себя самого)
 * Объявление shell, для которого написан скрипт: `!#<path to interpreter>`  
 (example: `!#/bin/bash`)
 * Сделать файл исполняемым: `chmod +x ./<name of script>`  
@@ -49,3 +49,9 @@
   + Старше ли <file1>, чем <file2>: `<file1> -ot <file2>`
   + Существует ли файл, и является ли его владельцем текущий пользователь: `-O <file>`
   + Сществует ли файл, и соответствует ли его идентификатор группы идентификатору группы текущего пользователя: `-G <file>`
+* Цикл for:
+  + `for <var> in <list> do <list of commands> done`  
+  (example: `for var in first second third fourth fifth`  
+            `do`  
+            `echo The $var item`  
+            `done`
