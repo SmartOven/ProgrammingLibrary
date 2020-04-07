@@ -1,4 +1,7 @@
 # ProgrammingLibrary
+### There are some folders with manuals about different useful things
+1. Bash scripts (in process...)
+2. Coming soon!
 ### The list of topics with links
 1. 3D renderer on *Java* - [an article](https://avikdas.com/build-your-own-raytracer/)
 2. Some algorithms - [GitHub](https://github.com/karan/Projects)
