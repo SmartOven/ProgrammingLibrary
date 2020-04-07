@@ -147,4 +147,9 @@
   + Создание дескриптора ввода/вывода данных:  
   Чтобы можно было использовать в программе несколько вариантов ввода (`STDIN`(!!!), file1, file2, ...),  
   нужно сохранить в отдельный дескриптор `STDIN`, а потом оттуда его вытащить.  
-  (example: `exec 6<&0; exec 0< **input**; <list of commands using **intput** file>; exec 0<&6; <list of commands using STDIN>;`)
+  (example: `exec 6< &0; exec 0< INPUT; <list of commands using INPUT file>; exec 0< &6; <list of commands using STDIN>;`)
+  + Закрытие дескриптора:  
+  После окончания выполнения работы скрипта дескрипторы закрываются автоматически, но,  
+  если нужно использовать их повторно (вдруг вам не хватит 6-ти штук), можно их закрыть и открыть  
+  уже с другим файлом для перенаправления функцией `exec` с использованием приставки `&-`  
+  (example: `exec 3> input; echo "Write in input file" > &3; exec 3> &-; echo "This won't work" > &3`)
