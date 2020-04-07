@@ -51,6 +51,6 @@
   + Сществует ли файл, и соответствует ли его идентификатор группы идентификатору группы текущего пользователя: `-G <file>`
 * Цикл for:
   + `for <var> in <list> do <list of commands> done`  
-  (example: `for var in first second third fourth fifth do echo The $var item done`  
-   (перебор простых значений))
-  
+  (simple example: `for var in first second third fourth fifth do echo The $var item done`)  
+  (real example: `file="myfile" for var in $(cat $file) do echo " $var" done`)
+* Separator (разделитель): изначально `bash` считает сепараторами пробел, табуляцию и перенос строки, но список сепараторов можно изменить 
