@@ -152,4 +152,6 @@
   После окончания выполнения работы скрипта дескрипторы закрываются автоматически, но,  
   если нужно использовать их повторно (вдруг вам не хватит 6-ти штук), можно их закрыть и открыть  
   уже с другим файлом для перенаправления функцией `exec` с использованием приставки `&-`  
-  (example: `exec 3> input; echo "Write in input file" > &3; exec 3> &-; echo "This won't work" > &3`)
+  (это вызовет перенаправление дескриптора из <number> в `&-`, условный NULL)  
+  (example: `exec 3> output; echo "Write in output file" > &3; exec 3> &-; echo "This won't work" > &3`)  
+  (example: `exec 3> out1; echo "Write in out1" > &3; exec 3> &-; exec 3> out2; echo "Write in out2" > &3`)
