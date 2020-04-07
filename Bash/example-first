@@ -1,0 +1,18 @@
+#!/bin/bash
+while [ -n "$1" ] # thriugh all the params
+do
+  case "$1" in
+    -a) echo "Found the -a option" ;;
+    -b) echo "Found the -b option";;
+    -c) echo "Found the -c option" ;;
+    --) shift; break ;; # if its '--' we break
+    *) echo "$1 is not an option";;
+  esac
+  shift # we always shift left next param
+done
+count=1
+for param in $@ # for all not shifted params
+do
+  echo "Parameter #$count: $param"
+  count=$(( $count + 1 ))
+done
