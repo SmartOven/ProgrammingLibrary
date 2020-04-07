@@ -51,4 +51,4 @@
   + Сществует ли файл, и соответствует ли его идентификатор группы идентификатору группы текущего пользователя: `-G <file>`
 * Цикл for:
   + `for <var> in <list> do <list of commands> done`  
-  (example: `for var in first second third fourth fifth do echo The $var item done`)
+  (example: `**for** var **in** first second third fourth fifth **do** echo The $var item **done**`)
