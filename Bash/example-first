@@ -1,5 +1,5 @@
 #!/bin/bash
-while [ -n "$1" ] # thriugh all the params
+while [ -n "$1" ] # through all the params
 do
   case "$1" in
     -a) echo "Found the -a option" ;;
