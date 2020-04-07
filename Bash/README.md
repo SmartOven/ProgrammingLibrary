@@ -74,8 +74,8 @@
   + Пример проверки на существование параметра: `if [ -n "$1" ] then echo Hello $1. else echo "No parameters found. " fi`
   + Чтобы сдвинуть влево все параметры (каждый `i-ый` становится `(i-1)-ым`), используется команда `shift`, но говорят, что надо быть с ней поосторожнее
 * `Case` в `bash`:  
-  `case "$1" in  
-  -a) echo "Found the -a option" ;;  
+  `case "$1" in`  
+  `-a) echo "Found the -a option" ;;`  
   -b) echo "Found the -b option" ;;  
   -c) echo "Found the -c option" ;;  
   *) echo "$1 is not an option" ;;  
