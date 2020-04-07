@@ -57,4 +57,5 @@
   + Простой цикл bash: `for <var> in <list> do <list of commands> done`  
   (simple example: `for var in first second third fourth fifth do echo The $var item done`)  
   (real example: `file="myfile" for var in $(cat $file) do echo " $var" done`)
-  + С-подобный цикл: `for (( a = 1; a < 10; a++ ))`
+  + С-подобный цикл: `for (( a = 1; a < 10; a++ ))`  
+  + Цикл может быть вложенным (похож на **Pascal** `>:(`)
