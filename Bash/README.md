@@ -1,6 +1,6 @@
 # Manual по Bash-скриптам (краткий список возможностей, пишу для себя самого)
 * Объявление shell, для которого написан скрипт: `!#<path to interpreter>`  
-(example: `!#/bin/bash`)
+(example: `#!/bin/bash`)
 * Сделать файл исполняемым: `chmod +x ./<name of script>`  
 (example: `chmod +x ./myscript`)
 * Вывод: `echo <list of parameters to output>`  
