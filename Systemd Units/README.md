@@ -16,7 +16,7 @@
 Секция **\[Unit\]**  
 (самые важные выделены жирным шрифтом):
 * **Description=**"Название вашего юнита"  
-(example: Description="Message Collector Bot")
+(example: Description="Socket reader")
 * Documentation=""
 * Wants=
 * Requires=
@@ -52,3 +52,21 @@
 * StartLimitAction=
 * RebootArgument=
 * SourcePath=
+* Conditions и Asserts блоки:  
+Блоки дополнительных условий запуска юнита  
+Не рассматриваются в этом мануале, так как их очень много и, возможно, они редко бывают полезны
+
+Секция \[Service\]:
+* будет рассмотрена позже
+
+Секция \[Install\]:
+* Alias=
+* WantedBy=
+* RequiredBy=
+* Also=
+* DefaultInstance=
+
+Полезные ссылки:
+* [Документация по юнитам](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Documentation=)
+* [systemd - ArchWiki](https://wiki.archlinux.org/index.php/Systemd_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
+* [Введение в systemctl](https://community.vscale.io/hc/ru/community/posts/211805669-%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-systemd-%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B-%D1%8E%D0%BD%D0%B8%D1%82%D1%8B)
