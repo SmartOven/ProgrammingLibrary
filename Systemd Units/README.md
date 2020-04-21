@@ -47,8 +47,8 @@
 * JobRunningTimeoutSec=
 * JobTimeoutAction=
 * JobTimeoutRebootArgument=
-* StartLimitIntervalSec=<interval>
-* StartLimitBurst=<burst>
+* StartLimitIntervalSec=\<interval\>
+* StartLimitBurst=\<burst\>
 * StartLimitAction=
 * RebootArgument=
 * SourcePath=
