@@ -17,48 +17,47 @@
 Списки обязательных переменных для каждой секции будет добавлен позже
 Списки возможных переменных для каждой секции находятся ниже
 
-Секция **\[Unit\]**  
-(самые важные выделены жирным шрифтом):
+Секция **\[Unit\]**:
 * **Description=**"Название вашего юнита"  
 (example: Description="Socket reader")
-* Documentation="Ссылка на документацию к юниту"  
+* **Documentation=**"Ссылка на документацию к юниту"  
 Должна содержать ссылку на документацию к этому юниту
 Возможные варианты ссылки: "http://", "https://", "file:", "info:", "man:"
 [Мануал о том, как писать мануалы](http://man7.org/linux/man-pages/man7/uri.7.html) (хаха, каламбур)
-* Wants=
-* Requires=
-* Requisite=
-* BindsTo=
-* PartOf=
-* Conflicts=
-* Before=
-* After=
-* OnFailure=
-* PropagatesReloadTo=
-* ReloadPropagatedFrom=
-* JoinsNamespaceOf=
-* RequiresMountsFor=
-* OnFailureJobMode=
-* IgnoreOnIsolate=
-* StopWhenUnneeded=
-* RefuseManualStart=
-* RefuseManualStop=
-* AllowIsolate=
-* DefaultDependencies=
-* CollectMode=
-* FailureAction=
-* SuccessAction=
-* FailureActionExitStatus=
-* SuccessActionExitStatus=
-* JobTimeoutSec=
-* JobRunningTimeoutSec=
-* JobTimeoutAction=
-* JobTimeoutRebootArgument=
-* StartLimitIntervalSec=\<interval\>
-* StartLimitBurst=\<burst\>
-* StartLimitAction=
-* RebootArgument=
-* SourcePath=
+* **Wants=**
+* **Requires=**
+* **Requisite=**
+* **BindsTo=**
+* **PartOf=**
+* **Conflicts=**
+* **Before=**
+* **After=**
+* **OnFailure=**
+* **PropagatesReloadTo=**
+* **ReloadPropagatedFrom=**
+* **JoinsNamespaceOf=**
+* **RequiresMountsFor=**
+* **OnFailureJobMode=**
+* **IgnoreOnIsolate=**
+* **StopWhenUnneeded=**
+* **RefuseManualStart=**
+* **RefuseManualStop=**
+* **AllowIsolate=**
+* **DefaultDependencies=**
+* **CollectMode=**
+* **FailureAction=**
+* **SuccessAction=**
+* **FailureActionExitStatus=**
+* **SuccessActionExitStatus=**
+* **JobTimeoutSec=**
+* **JobRunningTimeoutSec=**
+* **JobTimeoutAction=**
+* **JobTimeoutRebootArgument=**
+* **StartLimitIntervalSec=**\<interval\>
+* **StartLimitBurst=**\<burst\>
+* **StartLimitAction=**
+* **RebootArgument=**
+* **SourcePath=**
 * Conditions и Asserts блоки:  
 Блоки дополнительных условий запуска юнита  
 Не рассматриваются в этом мануале, так как их очень много и, возможно, они редко используются
@@ -67,11 +66,11 @@
 * будет рассмотрена позже
 
 Секция \[Install\]:
-* Alias=
-* WantedBy=
-* RequiredBy=
-* Also=
-* DefaultInstance=
+* **Alias=**
+* **WantedBy=**
+* **RequiredBy=**
+* **Also=**
+* **DefaultInstance=**
 
 Полезные ссылки:
 * [Документация по юнитам](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)
