@@ -15,9 +15,9 @@
 
 Секция **\[Unit\]**  
 (самые важные выделены жирным шрифтом):
-* **Description=**"<your_description>"  
-Название вашего юнита
-* Documentation=
+* **Description=**"Название вашего юнита"  
+(example: Description="Message Collector Bot")
+* Documentation=""
 * Wants=
 * Requires=
 * Requisite=
@@ -26,3 +26,29 @@
 * Conflicts=
 * Before=
 * After=
+* OnFailure=
+* PropagatesReloadTo=
+* ReloadPropagatedFrom=
+* JoinsNamespaceOf=
+* RequiresMountsFor=
+* OnFailureJobMode=
+* IgnoreOnIsolate=
+* StopWhenUnneeded=
+* RefuseManualStart=
+* RefuseManualStop=
+* AllowIsolate=
+* DefaultDependencies=
+* CollectMode=
+* FailureAction=
+* SuccessAction=
+* FailureActionExitStatus=
+* SuccessActionExitStatus=
+* JobTimeoutSec=
+* JobRunningTimeoutSec=
+* JobTimeoutAction=
+* JobTimeoutRebootArgument=
+* StartLimitIntervalSec=<interval>
+* StartLimitBurst=<burst>
+* StartLimitAction=
+* RebootArgument=
+* SourcePath=
