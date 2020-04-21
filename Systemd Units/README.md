@@ -13,11 +13,18 @@
 * \[Service\]
 * \[Install\]
 
+Каждая секция содержит переменные, на которые будет ссылаться **systemd**
+Списки обязательных переменных для каждой секции будет добавлен позже
+Списки возможных переменных для каждой секции находятся ниже
+
 Секция **\[Unit\]**  
 (самые важные выделены жирным шрифтом):
 * **Description=**"Название вашего юнита"  
 (example: Description="Socket reader")
-* Documentation=""
+* Documentation="Ссылка на документацию к юниту"  
+Должна содержать ссылку на документацию к этому юниту
+Возможные варианты ссылки: "http://", "https://", "file:", "info:", "man:"
+[Мануал о том, как писать мануалы](http://man7.org/linux/man-pages/man7/uri.7.html) (хаха, каламбур)
 * Wants=
 * Requires=
 * Requisite=
@@ -67,6 +74,6 @@
 * DefaultInstance=
 
 Полезные ссылки:
-* [Документация по юнитам](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Documentation=)
+* [Документация по юнитам](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)
 * [systemd - ArchWiki](https://wiki.archlinux.org/index.php/Systemd_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
 * [Введение в systemctl](https://community.vscale.io/hc/ru/community/posts/211805669-%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-systemd-%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B-%D1%8E%D0%BD%D0%B8%D1%82%D1%8B)
