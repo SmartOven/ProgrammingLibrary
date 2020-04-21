@@ -80,10 +80,21 @@
 * **RefuseManualStop=** - если `true` - его можно остановить только из другого юнита.  
 * **AllowIsolate=** - если `true` - его можно изолировать командой `systemctl isolate`. Лучше оставить `false` (дефолт)  
 * **DefaultDependencies=** - лучше не трогать (изначально `yes`).  
-* **CollectMode=** 
-* **FailureAction=**
-* **SuccessAction=**
-* **FailureActionExitStatus=**
+* **CollectMode=** - либо `inactive`, либо `inactive-or-failed`. Как-то меняет работу `garbage collector`
+* **FailureAction=** string_value  
+Блок должен иметь одно из значений:  
+\[none, reboot, reboot-force, reboot-immediate, poweroff, poweroff-force, poweroff-immediate, exit, exit-force\]
+В режиме пользователя доступны только: \[none, exit, exit-force\]
+Задает действие, выполняемое после остановки юнита (юнит выдал ошибку и остановился)
+* **SuccessAction=** string_value  
+Блок должен иметь одно из значений:  
+\[none, reboot, reboot-force, reboot-immediate, poweroff, poweroff-force, poweroff-immediate, exit, exit-force\]  
+В режиме пользователя доступны только: \[none, exit, exit-force\]  
+Задает действие, выполняемое после успешного выполнения юнита  
+* **FailureActionExitStatus=** int_value  
+Блок должен иметь значение в диапазоне от 0 до 255.  
+Значение используется для передачи `exit status` после выполнения **FailureAction=**  
+Используется только если **FailureAction=** установлен на `exit` или `exit-force`
 * **SuccessActionExitStatus=**
 * **JobTimeoutSec=**
 * **JobRunningTimeoutSec=**
