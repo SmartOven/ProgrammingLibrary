@@ -15,7 +15,7 @@
 
 Секция **\[Unit\]**  
 (самые важные выделены жирным шрифтом):
-* **Description=**"<your_description>"
+* **Description=**"<your_description>"  
 Название вашего юнита
 * Documentation=
 * Wants=
