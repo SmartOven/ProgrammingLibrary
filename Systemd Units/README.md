@@ -1,4 +1,5 @@
 # Systemd Units
+###### *Дополнительную информацию можно получить в источниках, указанных в самом низу*
 **Systemd** - инструмент для управления сервером с момента загрузки.  
 **Units** - файлы, которые запускаются **systemd** (условия запуска, остановки и прочее описывается в самом юните)  
 
@@ -19,7 +20,8 @@
 
 Секция **\[Unit\]**:
 * **Description=**"Название вашего юнита"  
-(example: Description="Socket reader")  
+Сюда помещается название вашего юнита (латиницей)  
+Оно будет использовано **systemd** в некоторых случаях: например, чтобы записать в лог-файл ошибку  
 * **Documentation=**"Ссылка на документацию к юниту"  
 Должна содержать ссылку на документацию к этому юниту  
 Возможные варианты ссылки: "http://", "https://", "file:", "info:", "man:"  
@@ -43,21 +45,42 @@
 При запуске данного юнита все юниты из списка **Conflicts=**, которые в данный момент активны (запущены и работают) будут остановлены  
 Для корректной работы данного блока должны быть объявлены блоки **Before=** и **After=**  
 Также стоит учитывать, что в блоки **Requires=** и **Conflicts=** не стоит пихать одинаковые юниты, в противном случае работа данного юнита завершится с ошибкой  
-* **Before=**
-* **After=**
-* **OnFailure=**
-* **PropagatesReloadTo=**
-* **ReloadPropagatedFrom=**
-* **JoinsNamespaceOf=**
-* **RequiresMountsFor=**
-* **OnFailureJobMode=**
-* **IgnoreOnIsolate=**
-* **StopWhenUnneeded=**
-* **RefuseManualStart=**
-* **RefuseManualStop=**
-* **AllowIsolate=**
-* **DefaultDependencies=**
-* **CollectMode=**
+* **Before=** 1.service 2.socket 3.mount  
+Если юнит (`a` из списка **Before=** и данный юнит) запускаются, то сначала запустится данный юнит, а потом уже юнит `a`  
+Для юнитов типа `.devise` данный блок пропускается и не имеет никакого эффекта на них  
+Переменных **Before=** может быть несколько  
+* **After=** 1.service 2.socket 3.mount  
+Если юнит (`a` из списка **After=** и данный юнит) запускаются, то сначала запустится юнит `a`, а потом уже данный юнит  
+Переменных **After=** может быть несколько  
+* **OnFailure=** 1.service 2.socket 3.mount  
+Список юнитов, которые будут запущены, если/когда данный юнит крашнется (перейдет в состояние `failed`)  
+Если юнит содержит блок **Restart=** - в состояние `failed` он перейдет только, когда достигнет лимит перезапусков  
+* **PropagatesReloadTo=** - см. [документацию](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#PropagatesReloadTo=)  
+* **ReloadPropagatedFrom=** - см. [документацию](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#PropagatesReloadTo=)  
+* **JoinsNamespaceOf=** 1.service 2.socket 3.mount  
+Параметр действует только на юниты типа `.service`
+Присоединяет пространства имен юнитов из списка к данному юниту  
+Этот параметр действует только в том случае, если (**PrivateNetwork=** или **NetworkNamespacePath=**) и/или **PrivateTmp=** объявлены для обоих юнитов: (тот, который присоединяют) и (тот, к которому присоединяют)  
+* **RequiresMountsFor=** path1 path2 path3  
+Автоматически добавляет в **Requires=** и **After=** все `.mount` юниты, которые нужно подключить, чтобы иметь доступ ко всем путям из данного списка  
+Актуально только для `.mount` юнитов с меткой `noauto`, все с меткой `auto` будут поключены и без использования данного блока  
+* **OnFailureJobMode=** string_value  
+Задает способ запуска юнитам, которые будут запущены в блоке **OnFailure=**
+Блок должен иметь одно из значений:  
+\["fail", "replace", "replace-irreversibly", "isolate", "flush", "ignore-dependencies", "ignore-requirements"\]  
+Если такого блока в юните нет, его дефолтное значение - "replce".  
+Описание каждого значения есть в [документации](https://www.freedesktop.org/software/systemd/man/systemctl.html#--job-mode=)
+* **IgnoreOnIsolate=** bool_value  
+Принимает булевое значение. `true` - этот юнит не будет остановлен во время изоляции другого юнита.  
+Дефолтное значение - `false`  
+* **StopWhenUnneeded=** bool_value  
+Принимает булевое значение. `true` - этот юнит будет остановлен когда перестанет быть нужным.  
+Дефолтное значение - `false` 
+* **RefuseManualStart=** - если `true` - его можно запустить только из другого юнита.  
+* **RefuseManualStop=** - если `true` - его можно остановить только из другого юнита.  
+* **AllowIsolate=** - если `true` - его можно изолировать командой `systemctl isolate`. Лучше оставить `false` (дефолт)  
+* **DefaultDependencies=** - лучше не трогать (изначально `yes`).  
+* **CollectMode=** 
 * **FailureAction=**
 * **SuccessAction=**
 * **FailureActionExitStatus=**
