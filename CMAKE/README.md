@@ -57,5 +57,5 @@ endforeach()
 ```
 )  
 Также цикл foreach может быть выполнен с использованием `RANGE`
-* `RANGE start end step` - `end` - обязателен, `start` и `step` - опциональны
+* `RANGE start end step` - `end` - обязателен, `start` и `step` - опциональны  
 Дефолтные значения: `start` = 0, `step` = 1
