@@ -42,10 +42,10 @@ while(${name} GREATER 5)
     set(name 4)
 endwhile()
 ```
-)
+)  
 For each цикл:
 ```cmake
-foreach(name 1 2 3 4 5)
+foreach(name list_of_values)
     message(${name})
 endforeach()
 ```
@@ -55,4 +55,7 @@ foreach(name 1 2 3 4 5)
     message(${name})
 endforeach()
 ```
-)
+)  
+Также цикл foreach может быть выполнен с использованием `RANGE`
+* `RANGE start end step` - `end` - обязателен, `start` и `step` - опциональны
+Дефолтные значения: `start` = 0, `step` = 1
