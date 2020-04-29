@@ -25,3 +25,6 @@ else() # no expression available
     statement3
 endif() 
 ```
+* `EQUAL` - `==`
+* `GREATER` - `>`
+* `LESS` - `<`
