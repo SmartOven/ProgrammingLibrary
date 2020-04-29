@@ -17,14 +17,14 @@
 
 Условные операторы:
 ```cmake
-if(expr1)
+if(expr1) # necessarily
     statement1
-elseif(expr2)
+elseif(expr2) # optional
     statement2
-else() # no expression available
+else() # optional, no expression available
     statement3
-endif() 
+endif() necessarily
 ```
-* `EQUAL` -- `==`
+* `EQUAL` -- `==`, `STREQUAL` -- `== for strings`
 * `GREATER` -- `>`
 * `LESS` -- `<`
