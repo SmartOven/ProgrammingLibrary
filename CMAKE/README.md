@@ -16,7 +16,7 @@
 * `option(optional_var "variable description" standard_value)`
 
 Условные операторы:
-* ```cmake
+```cmake
 if(expr1)
     statement1
 elseif(expr2)
