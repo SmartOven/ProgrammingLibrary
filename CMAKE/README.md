@@ -59,3 +59,21 @@ endforeach()
 Также цикл foreach может быть выполнен с использованием `RANGE`
 * `RANGE start end step` - `end` - обязателен, `start` и `step` - опциональны  
 Дефолтные значения: `start` = 0, `step` = 1
+(example: `RANGE 5` # 0 1 2 3 4 5)
+(example: `RANGE 2 5` # 2 3 4 5)
+(example: `RANGE 2 15 4` # 2 6 10 14)
+
+Функции и макросы:
+```cmake
+function(func_name arg1 arg2 arg3)
+    message(${arg1} " " ${arg2} " " ${arg3})
+endfunction()
+func_name(12 89 225) # вызов функции
+```
+```cmake
+macro(mac_name arg1 arg2 arg3)
+    message(${arg1} " "  ${arg2} " " ${arg3})
+endmacro()
+func_name(Hello, Ilon Musk) # вызов макроса
+```
+Отличие **макросов** от **функций**: переменные в функциях локальные, а в макросах - глобальные
