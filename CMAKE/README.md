@@ -28,3 +28,31 @@ endif() necessarily
 * `EQUAL` -- `==`, `STREQUAL` -- `== for strings`
 * `GREATER` -- `>`
 * `LESS` -- `<`
+
+Цикл while:
+```cmake
+while(${name} operator value)
+    statement
+endwhile()
+```
+(example:
+```cmake
+set(name 7)
+while(${name} GREATER 5)
+    set(name 4)
+endwhile()
+```
+)
+For each цикл:
+```cmake
+foreach(name 1 2 3 4 5)
+    message(${name})
+endforeach()
+```
+(example:
+```cmake
+foreach(name 1 2 3 4 5)
+    message(${name})
+endforeach()
+```
+)
